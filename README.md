@@ -222,6 +222,28 @@ The Airbnb Clone Backend is a robust and scalable backend system to manage users
       A property can have multiple reviews.
 
 
+**Feature Breakdown**
 
+👤 **1. User Management**
 
-      
+This feature handles user registration, authentication, and profile management. It ensures that users can securely sign up, log in, and update their personal details while maintaining data integrity and access control. Both hosts and guests interact with the system through this module.
+
+🏠 **2. Property Management**
+
+This feature allows hosts to create, update, retrieve, and delete property listings. It manages key details such as location, pricing, availability, and amenities, enabling users to browse and book properties efficiently. It forms the core of the platform’s listing functionality.
+
+📅 **3. Booking System**
+
+The booking system enables users to reserve properties for specific dates and manage their reservations. It ensures availability tracking, prevents double bookings, and supports modifications or cancellations. This feature provides the foundation for user–host interactions within the platform.
+
+💳 **4. Payment Processing**
+
+This feature manages all financial transactions related to bookings. It integrates secure payment gateways, records transaction details, and tracks payment status (e.g., completed, pending, failed). This ensures transparency and trust between hosts and guests.
+
+⭐**5. Review System**
+
+The review system allows guests to leave feedback and ratings on properties after their stay. It helps maintain quality standards by allowing future guests to make informed decisions based on past experiences. Hosts can use this feedback to improve their offerings.
+
+⚙️ **6. Data Optimization**
+
+This feature focuses on improving performance through database indexing, caching, and query optimization. By reducing load times and improving data retrieval speed, it ensures a smoother and more efficient user experience, especially at scale.      

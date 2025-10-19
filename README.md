@@ -306,3 +306,32 @@ Security logs and monitoring tools will track login attempts, failed transaction
 
 **Why it’s important:**
 Early detection of security breaches or unauthorized access helps prevent data loss and ensures accountability.
+
+
+**CI/CD Pipelines Overview**
+
+**What CI/CD Pipelines Are:**
+
+CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the process of building, testing, and deploying code changes. Continuous Integration ensures that every code update is automatically tested and merged into the main branch, while Continuous Deployment automates the release of tested code to production environments.
+
+**Why They Are Important for the Project:**
+
+CI/CD pipelines are crucial for the Airbnb Clone backend because they:
+
+      Ensure code quality and reliability through automated testing and linting.
+      
+      Enable faster and safer deployments, reducing downtime and manual errors.
+      
+      Allow the team to collaborate efficiently, as code changes are integrated continuously and deployed seamlessly.
+      
+      Support scalability and consistency in development, testing, and production environments.
+
+**Tools Used:**
+
+      a. GitHub Actions: Automates testing, builds, and deployment directly from the project’s GitHub repository.
+      
+      b. Docker: Ensures consistent development and deployment environments through containerization.
+      
+      c. Jenkins: Manages complex build pipelines and continuous delivery workflows.
+      
+      d. AWS CodePipeline or GitLab CI: Can be used for cloud-based CI/CD integration, ensuring smooth delivery to production servers.

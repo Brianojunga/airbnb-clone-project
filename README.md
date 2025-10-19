@@ -102,6 +102,126 @@ The Airbnb Clone Backend is a robust and scalable backend system to manage users
     e. Make sure the API performs well and works according to the OpenAPI documentation.
     
 
+**Database Design**
+🧑‍💼**1. Users**
+
+**Description:** Represents both guests and hosts who interact with the system.
+
+**Key Fields:**
+
+      user_id — Unique identifier for each user.
+      
+      name — Full name of the user.
+      
+      email — Used for authentication and communication.
+      
+      password_hash — Encrypted password for security.
+      
+      role — Defines whether the user is a guest or host.
+
+**Relationships:**
+
+      A user (host) can list multiple properties.
+      
+      A user (guest) can make multiple bookings.
+      
+      A user can write multiple reviews.
+
+🏠 **2. Properties**
+
+**Description:** Represents accommodations listed by hosts.
+
+**Key Fields:**
+
+      property_id — Unique identifier for the property.
+      
+      host_id — Foreign key referencing the user who owns the property.
+      
+      title — Name of the property listing.
+      
+      location — City or area where the property is located.
+      
+      price_per_night — Cost of booking per night.
+
+**Relationships:**
+
+      A property belongs to one host (user).
+      
+      A property can have multiple bookings.
+      
+      A property can have multiple reviews.
+
+📅 **3. Bookings**
+
+**Description:** Represents reservations made by users for properties.
+
+**Key Fields:**
+
+      booking_id — Unique identifier for the booking.
+      
+      property_id — References the property being booked.
+      
+      user_id — References the guest (user) who made the booking.
+      
+      check_in_date — Start date of the booking.
+      
+      check_out_date — End date of the booking.
+
+**Relationships:**
+
+      A booking belongs to one user (guest).
+      
+      A booking belongs to one property.
+      
+      A booking can have one associated payment record.
+
+💳 **4. Payments**
+
+**Description:** Represents financial transactions related to bookings.
+
+**Key Fields:**
+
+      payment_id — Unique identifier for the payment.
+      
+      booking_id — Foreign key referencing the booking.
+      
+      amount — Total amount paid.
+      
+      payment_method — e.g., credit card, PayPal.
+      
+      status — Indicates if the payment was successful, pending, or failed.
+
+**Relationships:**
+
+      A payment belongs to one booking.
+      
+      A booking has one payment.
+
+🌟 **5. Reviews**
+
+**Description:** Captures user feedback on properties.
+
+**Key Fields:**
+
+      review_id — Unique identifier for the review.
+      
+      property_id — References the property being reviewed.
+      
+      user_id — References the user who posted the review.
+      
+      rating — Numerical rating (e.g., 1–5).
+      
+      comment — Text feedback from the user.
+
+**Relationships:**
+
+      A review belongs to one property.
+      
+      A review belongs to one user (guest).
+      
+      A property can have multiple reviews.
 
 
 
+
+      

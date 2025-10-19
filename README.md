@@ -247,3 +247,62 @@ The review system allows guests to leave feedback and ratings on properties afte
 ⚙️ **6. Data Optimization**
 
 This feature focuses on improving performance through database indexing, caching, and query optimization. By reducing load times and improving data retrieval speed, it ensures a smoother and more efficient user experience, especially at scale.      
+
+
+**API Security**
+
+🔐 **1. Authentication**
+
+**What it is:**
+Authentication ensures that only verified users can access the system by requiring valid credentials (e.g., email and password or OAuth tokens). Django’s built-in authentication system or JWT (JSON Web Tokens) can be used for secure login and session management.
+
+**Why it’s important:**
+It prevents unauthorized access to user accounts, ensuring that personal data, bookings, and payment details are only accessible to legitimate users.
+
+🧩**2. Authorization**
+
+**What it is:**
+Authorization determines what actions a user is allowed to perform after being authenticated. Role-based access control (RBAC) will be implemented to separate privileges between users (guests, hosts, and admins).
+
+**Why it’s important:**
+It ensures users can only access or modify data they own (e.g., a host can edit their property but not another host’s listing), maintaining data integrity and privacy.
+
+🧱**3. Data Encryption**
+
+**What it is:**
+Sensitive data such as passwords and payment information will be encrypted using strong algorithms (e.g., AES, bcrypt, SSL/TLS). All communication between clients and the server will occur over HTTPS.
+
+**Why it’s important:**
+Encryption protects user credentials and payment details from being intercepted or exposed during transmission or while stored in the database.
+
+🚦 **4. Rate Limiting**
+
+**What it is:**
+Rate limiting restricts the number of requests a client can make in a given timeframe using tools like Django REST Framework’s throttling.
+
+**Why it’s important:**
+It prevents brute-force login attacks and protects the backend from denial-of-service (DoS) attempts, ensuring system stability and fair access for all users.
+
+🧹 **5. Input Validation and Sanitization**
+
+**What it is:**
+All incoming data will be validated and sanitized to prevent malicious inputs such as SQL injection or cross-site scripting (XSS).
+
+**Why it’s important:**
+It protects the system from being exploited by attackers who might try to manipulate database queries or execute harmful scripts.
+
+🧾 **6. Secure Payment Handling**
+
+**What it is:**
+Integration with trusted third-party payment processors (e.g., Stripe or PayPal) ensures that payment information never directly touches the application’s database.
+
+**Why it’s important:**
+It guarantees compliance with PCI-DSS standards and prevents exposure of sensitive financial data, protecting both users and the platform from fraud.
+
+🧍 **7. Logging and Monitoring**
+
+**What it is:**
+Security logs and monitoring tools will track login attempts, failed transactions, and data access patterns. Suspicious activity will trigger alerts or temporary account lockdowns.
+
+**Why it’s important:**
+Early detection of security breaches or unauthorized access helps prevent data loss and ensures accountability.
